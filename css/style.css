@@ -1,0 +1,392 @@
+/* Reset and Basic Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - with Profile Picture */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .profile-info {
+    display: flex;
+    align-items: center;
+}
+
+header .profile-info img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+header .profile-info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: 600;
+    color: #66cc99; /* Accent Color on Logo */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #777;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #66cc99; /* Accent Color */
+}
+
+/* Hero Section */
+#hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #777;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* About Section - with Intro and Interests */
+#about {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+#about .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 80px 20px;
+    max-width: 1400px; /* Set max-width for about-content */
+    margin: 0 auto; /* Center it if needed */
+
+}
+
+#about .about-intro {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#about .about-intro h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+#about .about-intro h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    height: 3px;
+    width: 50px;
+    background-color: #66cc99; /* Accent Color */
+    transform: translateX(-50%);
+}
+
+#about .about-intro p {
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* Hybrid Scroll Interests Section */
+#about .interests-section.hybrid-scroll {
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#about .interests-section.hybrid-scroll h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#about .interests-section.hybrid-scroll .interests-list-wrapper {
+    overflow: hidden;
+    width: calc(2 * (500px + 30px)); /* This should remain the same if you still want to show 2 at a time */
+    margin: 0 auto;
+}
+
+#about .interests-section.hybrid-scroll .interests-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for manual scroll */
+    width: fit-content; /* Ensure it's wide enough */
+}
+
+#about .interests-section.hybrid-scroll .interest-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+    flex: 0 0 auto;
+    width: 450px; /* Adjust as needed */
+    text-align: center;
+    padding: 20px;
+}
+
+#about .interests-section.hybrid-scroll .interest-item:last-child {
+    margin-right: 0;
+}
+
+#about .interests-section.hybrid-scroll .interest-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#about .interests-section.hybrid-scroll .interest-item .interest-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+#about .interests-section.hybrid-scroll .interest-item .interest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about .interests-section.hybrid-scroll .interest-item p {
+    font-size: 0.9em;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#about .interests-section.hybrid-scroll .scroll-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#about .interests-section.hybrid-scroll .scroll-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+#about .interests-section.hybrid-scroll .scroll-dot.active {
+    background-color: #66cc99;
+}
+
+/* Profile Image */
+#about .about-image {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin: 30px auto 0; /* Center the profile image */
+}
+
+#about .about-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image fills the circle */
+}
+
+/* Portfolio Section - No Images */
+#portfolio {
+    padding: 100px 0;
+    background-color: #f2f2f2;
+}
+
+#portfolio h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+#portfolio h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    height: 3px;
+    width: 50px;
+    background-color: #66cc99; /* Accent Color */
+    transform: translateX(-50%);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-grid .project-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 30px; /* Increased padding for more space */
+}
+
+.portfolio-grid .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-grid .project-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.portfolio-grid .project-item h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 40px;
+    background-color: #66cc99; /* Accent Color */
+}
+
+.portfolio-grid .project-item p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.portfolio-grid .project-item a {
+    color: #66cc99; /* Accent color for the link */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.portfolio-grid .project-item a:hover {
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    height: 3px;
+    width: 50px;
+    background-color: #66cc99; /* Accent Color */
+    transform: translateX(-50%);
+}
+
+#contact p {
+    font-size: 1.1em;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    padding: 0 20px;
+}
+
+.interest-item {
+    /* Existing styles */
+    transform: scale(0.8); /* Initial smaller scale */
+    opacity: 0.7;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.interest-item.active {
+    transform: scale(1); /* Scale up when active */
+    opacity: 1;
+}
