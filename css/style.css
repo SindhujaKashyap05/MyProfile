@@ -538,7 +538,7 @@ footer .container {
 
      /* My Interests Beyond Code Section Fix */
      #about .interests-section.hybrid-scroll {
-         padding: 20px 10px !important;
+         padding: 20px 0px !important;
      }
 
      #about .interests-section.hybrid-scroll h3 {
@@ -546,9 +546,10 @@ footer .container {
      }
 
      #about .interests-section.hybrid-scroll .interests-list-wrapper {
-         width: 100% !important;
+         padding: 0 10px !important; /* Add some horizontal padding to the wrapper */
          overflow-x: auto !important;
          -webkit-overflow-scrolling: touch !important;
+         width: 100% !important;
          margin: 0 auto !important;
      }
 
@@ -560,15 +561,21 @@ footer .container {
      }
 
      #about .interests-section.hybrid-scroll .interest-item {
-          width: 80% !important; /* Adjust width as needed */
-          margin-right: 15px !important; /* Spacing between items */
+          width: 70% !important; /* Adjust width as needed */
+          margin-right: 10px !important; /* Spacing between items */
           flex-shrink: 0 !important; /* Prevent shrinking */
           border: 1px solid #ddd !important; /* Keep border for debugging */
-          padding: 15px !important;
+          padding: 10px !important;
           box-sizing: border-box !important;
           text-align: center !important;
+          transform-origin: center center !important;
      }
 
+     #about .interests-section.hybrid-scroll .interest-item.active {
+          transform: scale(1.05) !important; /* Slightly increase scale */
+          padding: 12px !important;
+          z-index: 1 !important;
+     }
      #about .interests-section.hybrid-scroll .interest-item:last-child {
           margin-right: 0 !important; /* Remove margin from last item */
      }
