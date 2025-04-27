@@ -546,36 +546,41 @@ footer .container {
      }
 
      #about .interests-section.hybrid-scroll .interests-list-wrapper {
+         width: 100% !important;
          overflow-x: auto !important;
          -webkit-overflow-scrolling: touch !important;
-         width: 100% !important;
-         margin: 0 auto !important; /* Ensure centering is not interfering */
+         margin: 0 auto !important;
      }
 
      #about .interests-section.hybrid-scroll .interests-list {
          display: flex !important;
-         flex-wrap: nowrap !important;
-         width: fit-content !important;
+         flex-direction: row !important; /* Ensure items are in a row */
+         flex-wrap: nowrap !important; /* Prevent wrapping */
+         width: fit-content !important; /* Make width based on content */
      }
 
      #about .interests-section.hybrid-scroll .interest-item {
-         width: calc(90% - 20px) !important; /* Adjust width */
-         margin-right: 20px !important;
-         flex-shrink: 0 !important;
-         border: 1px solid #ddd !important; /* Keep border for debugging */
-         padding: 15px !important;
-         box-sizing: border-box !important;
-         text-align: center !important;
+          width: 80% !important; /* Adjust width as needed */
+          margin-right: 15px !important; /* Spacing between items */
+          flex-shrink: 0 !important; /* Prevent shrinking */
+          border: 1px solid #ddd !important; /* Keep border for debugging */
+          padding: 15px !important;
+          box-sizing: border-box !important;
+          text-align: center !important;
      }
 
-     #about .interests-section.hybrid-scroll .interest-item .interest-image {
-         width: 60px !important;
-         height: 60px !important;
-         margin: 0 auto 10px !important; /* Center image */
+     #about .interests-section.hybrid-scroll .interest-item:last-child {
+          margin-right: 0 !important; /* Remove margin from last item */
+     }
+
+     #about .interests-section.hybrid-scroll .interest-image {
+          width: 50px !important;
+          height: 50px !important;
+          margin: 0 auto 5px !important;
      }
 
      #about .interests-section.hybrid-scroll .scroll-dots {
-         display: none !important;
+          display: none !important; /* Hide scroll dots */
      }
 
      #about .about-intro p {
