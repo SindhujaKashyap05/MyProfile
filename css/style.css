@@ -507,72 +507,85 @@ footer .container {
     border-width: 2px;
 }
 
-/* Mobile styles */
+/* Mobile Styles (Attempt 3 - Increased Specificity) */
 @media (max-width: 600px) {
-    /* Navigation Bar Fix */
-    nav ul {
-        display: flex; /* Keep items in a row */
-        flex-direction: column; /* Stack them vertically */
-        align-items: center; /* Center items horizontally */
-    }
+     /* Navigation Bar Fix */
+     header nav ul {
+         display: flex !important; /* Ensure flexbox is used */
+         flex-direction: column !important; /* Stack links vertically */
+         align-items: stretch !important; /* Full width alignment */
+         padding: 0 !important;
+         margin: 0 !important;
+     }
 
-    nav li {
-        margin-left: 0;
-        margin-bottom: 10px; /* Add vertical spacing between links */
-        display: block; /* Make each li take full width */
-    }
+     header nav li {
+         margin: 0 !important;
+         display: block !important;
+     }
 
-    nav a {
-        display: block;
-        padding: 10px 0;
-        text-align: center; /* Center the link text */
-        border-bottom: 1px solid #eee; /* Optional: Add dividers */
-        width: 100%; /* Make the link span the full width */
-        box-sizing: border-box; /* Include padding and border in the width */
-    }
+     header nav a {
+         display: block !important;
+         padding: 15px !important;
+         text-align: center !important;
+         border-bottom: 1px solid #eee !important;
+         box-sizing: border-box !important;
+         width: 100% !important;
+     }
 
-    nav li:last-child a {
-        border-bottom: none;
-    }
+     header nav li:last-child a {
+         border-bottom: none !important;
+     }
 
-    /* My Interests Beyond Code Section Fix */
-    #about .interests-section.hybrid-scroll {
-        padding: 20px 10px; /* Adjust padding for mobile */
-    }
+     /* My Interests Beyond Code Section Fix */
+     #about .interests-section.hybrid-scroll {
+         padding: 20px 10px !important;
+     }
 
-    #about .interests-section.hybrid-scroll h3 {
-        text-align: center; /* Center the heading on mobile */
-    }
+     #about .interests-section.hybrid-scroll h3 {
+         text-align: center !important;
+     }
 
-    #about .interests-section.hybrid-scroll .interests-list-wrapper {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+     #about .interests-section.hybrid-scroll .interests-list-wrapper {
+         overflow-x: auto !important;
+         -webkit-overflow-scrolling: touch !important;
+         width: 100% !important;
+         margin: 0 auto !important; /* Ensure centering is not interfering */
+     }
 
-    #about .interests-section.hybrid-scroll .interests-list {
-        display: flex;
-        flex-wrap: nowrap;
-        width: fit-content; /* Adjust width to content */
-    }
+     #about .interests-section.hybrid-scroll .interests-list {
+         display: flex !important;
+         flex-wrap: nowrap !important;
+         width: fit-content !important;
+     }
 
-    #about .interests-section.hybrid-scroll .interest-item {
-        width: calc(80% - 20px); /* Make items wider with margin */
-        margin-right: 20px;
-        flex-shrink: 0;
-        border: 1px solid #ddd; /* Add a border to see the items clearly */
-        padding: 15px;
-        box-sizing: border-box; /* Include padding and border in width */
-        text-align: center;
-    }
+     #about .interests-section.hybrid-scroll .interest-item {
+         width: calc(90% - 20px) !important; /* Adjust width */
+         margin-right: 20px !important;
+         flex-shrink: 0 !important;
+         border: 1px solid #ddd !important; /* Keep border for debugging */
+         padding: 15px !important;
+         box-sizing: border-box !important;
+         text-align: center !important;
+     }
 
-    #about .interests-section.hybrid-scroll .interest-item .interest-image {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 5px;
-    }
+     #about .interests-section.hybrid-scroll .interest-item .interest-image {
+         width: 60px !important;
+         height: 60px !important;
+         margin: 0 auto 10px !important; /* Center image */
+     }
 
-    #about .interests-section.hybrid-scroll .scroll-dots {
-        display: none; /* Hide dots for horizontal scroll */
-    }
+     #about .interests-section.hybrid-scroll .scroll-dots {
+         display: none !important;
+     }
+
+     #about .about-intro p {
+          word-break: break-word !important; /* Force long words to break */
+          hyphens: auto !important; /* Enable hyphenation for better flow */
+          text-align: left !important; /* Align text to the left for readability on mobile */
+     }
+
+     #about .about-intro {
+          text-align: left !important; /* Align the container to the left as well */
+     }
+
 }
