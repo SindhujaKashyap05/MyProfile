@@ -1,4 +1,4 @@
-/* Reset and Basic Styles */
+/* Reset and Basic Styles (No changes needed as they are foundational) */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -15,10 +15,10 @@ body {
     padding: 0 20px;
 }
 
-/* Header - with Profile Picture */
+/* Header (Minor accent color consistency) */
 header {
     background-color: #fff;
-    padding: 20px 0;
+    padding: 25px 0;
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
@@ -37,18 +37,18 @@ header .profile-info {
 }
 
 header .profile-info img {
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 20px;
     object-fit: cover;
 }
 
 header .profile-info h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em; /* Adjust size as needed */
+    font-size: 1.8em;
     font-weight: 600;
-    color: #66cc99; /* Accent Color on Logo */
+    color: #66cc99;
     margin: 0;
 }
 
@@ -74,10 +74,12 @@ nav a:hover {
     color: #66cc99; /* Accent Color */
 }
 
-/* Hero Section */
+/* Hero Section (Subtle background) */
 #hero {
-    padding: 100px 0;
+    padding: 60px 0;
     text-align: center;
+    /* Subtle light gray background variation */
+    background-color: #f9f9f9; /* Maintain consistent light background */
 }
 
 #hero h2 {
@@ -95,7 +97,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* About Section - with Intro and Interests */
+/* About Section - with Intro and Interests (Consistent accent and subtle highlights) */
 #about {
     padding: 80px 0;
     background-color: #fff;
@@ -105,10 +107,9 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 80px 20px;
-    max-width: 1400px; /* Set max-width for about-content */
-    margin: 0 auto; /* Center it if needed */
-
+    padding: 0px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 #about .about-intro {
@@ -142,7 +143,7 @@ nav a:hover {
     margin: 10px auto;
 }
 
-/* Hybrid Scroll Interests Section */
+/* Hybrid Scroll Interests Section (Subtle active item highlight) */
 #about .interests-section.hybrid-scroll {
     padding: 30px 20px;
     background-color: #f9f9f9;
@@ -161,14 +162,14 @@ nav a:hover {
 
 #about .interests-section.hybrid-scroll .interests-list-wrapper {
     overflow: hidden;
-    width: calc(2 * (500px + 30px)); /* This should remain the same if you still want to show 2 at a time */
+    width: calc(2 * (450px + 30px)); /* Adjusted width to match item width */
     margin: 0 auto;
 }
 
 #about .interests-section.hybrid-scroll .interests-list {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for manual scroll */
-    width: fit-content; /* Ensure it's wide enough */
+    transition: transform 0.5s ease-in-out;
+    width: fit-content;
 }
 
 #about .interests-section.hybrid-scroll .interest-item {
@@ -177,9 +178,10 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-right: 30px;
     flex: 0 0 auto;
-    width: 450px; /* Adjust as needed */
+    width: 450px;
     text-align: center;
     padding: 20px;
+    border: 1px solid transparent; /* For active state */
 }
 
 #about .interests-section.hybrid-scroll .interest-item:last-child {
@@ -189,6 +191,7 @@ nav a:hover {
 #about .interests-section.hybrid-scroll .interest-item h4 {
     font-size: 1.2em;
     margin-bottom: 10px;
+    color: #333; /* Ensure readability */
 }
 
 #about .interests-section.hybrid-scroll .interest-item .interest-image {
@@ -209,6 +212,11 @@ nav a:hover {
     font-size: 0.9em;
     margin-top: 10px;
     margin-bottom: 0;
+    color: #777; /* Ensure readability */
+}
+
+#about .interests-section.hybrid-scroll .interest-item.active {
+    border-color: #66cc99; /* Subtle highlight for active item */
 }
 
 #about .interests-section.hybrid-scroll .scroll-dots {
@@ -227,27 +235,27 @@ nav a:hover {
 }
 
 #about .interests-section.hybrid-scroll .scroll-dot.active {
-    background-color: #66cc99;
+    background-color: #66cc99; /* Accent Color */
 }
 
-/* Profile Image */
+/* Profile Image (No direct color change) */
 #about .about-image {
-    width: 200px; /* Adjust size as needed */
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    margin: 30px auto 0; /* Center the profile image */
+    margin: 30px auto 0;
 }
 
 #about .about-image img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image fills the circle */
+    object-fit: cover;
 }
 
-/* Portfolio Section - No Images */
+/* Portfolio Section (Subtle link color) */
 #portfolio {
     padding: 100px 0;
     background-color: #f2f2f2;
@@ -288,7 +296,7 @@ nav a:hover {
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    padding: 30px; /* Increased padding for more space */
+    padding: 30px;
 }
 
 .portfolio-grid .project-item:hover {
@@ -332,7 +340,7 @@ nav a:hover {
     color: #333;
 }
 
-/* Contact Section */
+/* Contact Section (Consistent accent and subtle form background) */
 #contact {
     padding: 80px 0;
     background-color: #fff;
@@ -363,10 +371,116 @@ nav a:hover {
     font-size: 1.1em;
     color: #777;
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
 }
 
-/* Footer */
+.contact-info,
+.contact-form,
+.social-icons {
+    margin-top: 30px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #66cc99; /* Accent Color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #333;
+}
+
+.contact-form form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9; /* Subtle light background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button[type="button"] {
+    background-color: #66cc99; /* Your accent color for the button */
+    color: #fff;
+    padding: 12px 25px; /* Adjusted padding */
+    border: none;
+    border-radius: 8px; /* Rounded corners like interests */
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif; /* Match heading font for emphasis */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="button"]:hover {
+    background-color: #52a37d; /* Slightly darker hover */
+}
+
+.social-icons {
+    margin-top: 40px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.8em;
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #66cc99; /* Accent Color */
+}
+
+/* Footer (No direct color change) */
 footer {
     background-color: #333;
     color: #f9f9f9;
@@ -379,14 +493,16 @@ footer .container {
     padding: 0 20px;
 }
 
+/* Interest Item (Active state styling) */
 .interest-item {
-    /* Existing styles */
-    transform: scale(0.8); /* Initial smaller scale */
+    transform: scale(0.8);
     opacity: 0.7;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Added border-color transition */
 }
 
 .interest-item.active {
-    transform: scale(1); /* Scale up when active */
+    transform: scale(1);
     opacity: 1;
+    border-color: #66cc99; /* Highlight active item */
+    border-width: 2px;
 }
