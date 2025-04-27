@@ -509,49 +509,70 @@ footer .container {
 
 /* Mobile styles */
 @media (max-width: 600px) {
+    /* Navigation Bar Fix */
     nav ul {
-        display: block; /* Change to block to stack items */
-        text-align: center; /* Center the links if desired */
+        display: flex; /* Keep items in a row */
+        flex-direction: column; /* Stack them vertically */
+        align-items: center; /* Center items horizontally */
     }
 
     nav li {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 15px; /* Add vertical spacing */
-        display: block; /* Ensure they are block-level */
+        margin-left: 0;
+        margin-bottom: 10px; /* Add vertical spacing between links */
+        display: block; /* Make each li take full width */
     }
 
     nav a {
-        display: block; /* Make the entire link tappable */
-        padding: 10px 0; /* Add vertical padding for touch targets */
+        display: block;
+        padding: 10px 0;
+        text-align: center; /* Center the link text */
         border-bottom: 1px solid #eee; /* Optional: Add dividers */
+        width: 100%; /* Make the link span the full width */
+        box-sizing: border-box; /* Include padding and border in the width */
     }
 
     nav li:last-child a {
-        border-bottom: none; /* Remove border from the last item */
+        border-bottom: none;
     }
+
+    /* My Interests Beyond Code Section Fix */
+    #about .interests-section.hybrid-scroll {
+        padding: 20px 10px; /* Adjust padding for mobile */
+    }
+
+    #about .interests-section.hybrid-scroll h3 {
+        text-align: center; /* Center the heading on mobile */
+    }
+
     #about .interests-section.hybrid-scroll .interests-list-wrapper {
-            width: 100%; /* Make the wrapper take full width */
-            overflow-x: auto; /* Enable horizontal scrolling if items don't fit */
-            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-        }
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        #about .interests-section.hybrid-scroll .interests-list {
-            display: flex;
-            flex-wrap: nowrap; /* Prevent wrapping to keep items in a row for scrolling */
-            width: fit-content; /* Make the list wide enough to contain all items */
-        }
+    #about .interests-section.hybrid-scroll .interests-list {
+        display: flex;
+        flex-wrap: nowrap;
+        width: fit-content; /* Adjust width to content */
+    }
 
-        #about .interests-section.hybrid-scroll .interest-item {
-            width: calc(100% - 20px); /* Make each item take full width with some margin */
-            margin-right: 20px; /* Add spacing between items */
-            flex-shrink: 0; /* Prevent items from shrinking */
-        }
+    #about .interests-section.hybrid-scroll .interest-item {
+        width: calc(80% - 20px); /* Make items wider with margin */
+        margin-right: 20px;
+        flex-shrink: 0;
+        border: 1px solid #ddd; /* Add a border to see the items clearly */
+        padding: 15px;
+        box-sizing: border-box; /* Include padding and border in width */
+        text-align: center;
+    }
 
-        #about .interests-section.hybrid-scroll .interest-item:last-child {
-            margin-right: 0; /* Remove margin from the last item */
-        }
+    #about .interests-section.hybrid-scroll .interest-item .interest-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
 
-        #about .interests-section.hybrid-scroll .scroll-dots {
-            display: none; /* Hide scroll dots on mobile if horizontal scrolling is enabled */
-        }
+    #about .interests-section.hybrid-scroll .scroll-dots {
+        display: none; /* Hide dots for horizontal scroll */
+    }
 }
