@@ -572,7 +572,7 @@ footer .container {
      }
 
      #about .interests-section.hybrid-scroll .interest-item.active {
-          transform: scale(1.05) !important; /* Slightly increase scale */
+          transform: scale(.70) !important; /* Slightly increase scale */
           padding: 12px !important;
           z-index: 1 !important;
      }
