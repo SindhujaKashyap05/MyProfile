@@ -506,3 +506,52 @@ footer .container {
     border-color: #66cc99; /* Highlight active item */
     border-width: 2px;
 }
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    nav ul {
+        display: block; /* Change to block to stack items */
+        text-align: center; /* Center the links if desired */
+    }
+
+    nav li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 15px; /* Add vertical spacing */
+        display: block; /* Ensure they are block-level */
+    }
+
+    nav a {
+        display: block; /* Make the entire link tappable */
+        padding: 10px 0; /* Add vertical padding for touch targets */
+        border-bottom: 1px solid #eee; /* Optional: Add dividers */
+    }
+
+    nav li:last-child a {
+        border-bottom: none; /* Remove border from the last item */
+    }
+    #about .interests-section.hybrid-scroll .interests-list-wrapper {
+            width: 100%; /* Make the wrapper take full width */
+            overflow-x: auto; /* Enable horizontal scrolling if items don't fit */
+            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+        }
+
+        #about .interests-section.hybrid-scroll .interests-list {
+            display: flex;
+            flex-wrap: nowrap; /* Prevent wrapping to keep items in a row for scrolling */
+            width: fit-content; /* Make the list wide enough to contain all items */
+        }
+
+        #about .interests-section.hybrid-scroll .interest-item {
+            width: calc(100% - 20px); /* Make each item take full width with some margin */
+            margin-right: 20px; /* Add spacing between items */
+            flex-shrink: 0; /* Prevent items from shrinking */
+        }
+
+        #about .interests-section.hybrid-scroll .interest-item:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        #about .interests-section.hybrid-scroll .scroll-dots {
+            display: none; /* Hide scroll dots on mobile if horizontal scrolling is enabled */
+        }
+}
